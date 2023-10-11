@@ -1,16 +1,25 @@
 #include "main.h"
-#include <stdio.h>
+
+
 /**
- * main - check the code
+ * add - entry point
  *
- * Return: Always 0.
+ *Description: function that adds two integers and
+ * returns the result.
+ *
+ * @n1: integer on
+ * @n2: integer two
+ *
+ * Return:sum.
+ *
  */
-int main(void)
+
+
+int add(int n1, int n2)
 {
-	int n;
+	int sum;
 
 
-	n = add(89, 9);
-	printf("%d\n", n);
-	return (0);
+	sum = n1 + n2;
+	return (sum);
 }
