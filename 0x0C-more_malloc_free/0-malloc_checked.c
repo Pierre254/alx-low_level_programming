@@ -1,20 +1,19 @@
 #include "main.h"
 
-
 /**
-* malloc_checked - cause normal process termination with a status value of 98
-*
-* @b: allocated memory
-*
-* Return: a pointer to the allocated memory
-*/
+ * malloc_checked - allocate memory and check for allocation success
+ *
+ * @b: size of memory to allocate
+ *
+ * Return: a pointer to the allocated memory
+ */
 void *malloc_checked(unsigned int b)
 {
-   void *i;
+	void *i;
 
+	i = malloc(b);
+	if (i == NULL)
+		exit(98);
 
-   i = malloc(b);
-   if (i == NULL)
-       exit(98);
-   return (i);
+	return (i);
 }
